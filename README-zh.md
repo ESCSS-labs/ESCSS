@@ -1,30 +1,26 @@
 ![logo](./assets/logo.png)
 
-# Language
+## 快速連結
 
-- [中文](./README-zh.md)
+- [什麼是 ESCSS](#什麼是-escss)
+- [核心概念 - 本質複雜性](#核心概念---本質複雜性essential-complexity)
+- [例子](#例子)
+- [問與答](#問與答)
 
-## Quick Links
+## 什麼是 ESCSS?
 
-- [What is ESCSS](#what-is-escss)
-- [Core Concept - Essence Complexity](#core-concept---essence-complexity)
-- [Demo](#demo)
-- [Q&A](#qa)
+- ESCSS = extra structure (BEM) CSS + 致敬 ECMAScript
+- ESCSS (發音如同 'escapes') 是一種銀彈方法論，靈感來自《人月神話》一書，旨在解決軟體困境，減少開發者的挫敗感。
 
-## What is ESCSS?
+## 核心概念 - 本質複雜性(essential complexity)
 
-- ESCSS = extra structure (BEM) CSS + pay tribute to ECMAScript
-- ESCSS (pronounced 'escapes') is a Silver Bullet methodology, inspired by The Mythical Man-Month, designed to resolve software dilemmas and reduce developer frustration.
-
-## Core Concept - Essence Complexity
-
-Group similar stuff, extract common elements, and repeat endlessly.
+將相似的事物分組，提取共同元素，並不斷重複。
 
 ![loop](./assets/loop.gif)
 
-## Demo
+## 例子
 
-A demo of CardVue.vue(component) using [ESCSS-ESTest](https://github.com/ESCSS-labs/ESCSS-ESTest) & [ESCSS-SCSS](https://github.com/ESCSS-labs/ESCSS-SCSS)
+用 CardVue.vue(component) 來演示，並且使用 [ESCSS-ESTest](https://github.com/ESCSS-labs/ESCSS-ESTest) & [ESCSS-SCSS](https://github.com/ESCSS-labs/ESCSS-SCSS)
 
 ```vue
 <script setup>
@@ -89,13 +85,13 @@ CardVue.out.sum(1, 2);
 </template>
 
 <style lang="scss">
-@include utils_base-preflight-v3-modify; // built-in base css
+@include utils_base-preflight-v3-modify; // 內建的 base css
 
-// translate from tailwind to scss directly
+// 這只是直接從 tailwind 轉化成 scss
 #🍎UIComponent {
-  margin-top: 20px; // use vanilla css
-  @include bg-green-300; // use tailwind utility in Sass
-  @include utils_reset-tw; // reset tailwind variables
+  margin-top: 20px; // 使用 css
+  @include bg-green-300; // 使用 tailwind
+  @include utils_reset-tw; // 重置某些 tailwind 變數
 }
 
 #🔥PersonCard {
@@ -191,32 +187,32 @@ CardVue.out.sum(1, 2);
 
 ![demo](./assets/demo.png)
 
-## Q&A
+## 問與答
 
-### Why you think ESCSS is the Silver Bullet?
+### 為什麼你認為 ESCSS 是銀彈嗎？?
 
-- CSS and JavaScript have consistently ranked in the top three on Stack Overflow for many years and can be used for various purposes, including websites, applications, and games.
-- While CSS and JavaScript are easy to use, they can present challenges in maintenance. This is where ESCSS can simplify and enhance the process.
-- ESCSS combines object-oriented programming with functional programming styles.
+- CSS 和 JavaScript 自多年來年一直居於 Stack Overflow 的排行榜中的前三名，並且可以用於網站、應用程序和遊戲等不同用途。
+- CSS 和 JavaScript 易於使用，但維護起來可能具有挑戰性。這就是 ESCSS 可以簡化和增強的部分。
+- ESCSS 將物件導向與函數編成風格結合。
 
-### Demo of the JavaScript part
+### JavaScript部分的演示
 
-#### Mutation:
+#### 可變性(Mutation):
 
-- I think mutations can be more efficient than immutable operations.
-- Use ESCSS-ESTest to make functions to be pure function.
+- 我認為可變性比不可變性操作更有效率.
+- 使用 ESCSS-ESTest 來創建純函數.
 
-### Demo of the CSS part
+### CSS部分的演示
 
 #### ID:
 
-- Keep HTML clean.
-- Maintain flat specificity (1,0,0) in general.
-- Handle Bootstrap !important situation.
+- 保持 HTML 的簡潔。
+- 通常維護扁平化的特異性(1,0,0)。
+- 處理 Bootstrap 中的 !important 情況。
 
-#### Status Class:
+#### 狀態 Class:
 
-- Use !important to override id.
+- 使用 !important 覆蓋 id.
 
 ```scss
 .--active {
@@ -224,10 +220,10 @@ CardVue.out.sum(1, 2);
 }
 ```
 
-#### Developer Experience:
+#### 開發者體驗:
 
-- Increase devtool readability.
-- Suggest to use example 2 for easy to copy/search/replace
+- 提高開發工具的可讀性。.
+- 建議使用 example 2 以便於複製/搜索/替換。
 
 ```scss
 // example 1
@@ -247,12 +243,12 @@ CardVue.out.sum(1, 2);
 }
 ```
 
-#### Naming Convention:
+#### 命名風格:
 
-- PascalCase: 🔥CardVue (follows component name for consistency).
-- Double Underscore (__): 🔥CardBox__CardText.
-- Double hyphen(--) in status class: --dark、--active
-- Emojis for organization/readability: Page component (🌀), component (🔥).
-- Meaningless element: Follow the element name 🔥Card__Box__A、🔥PersonCard__Img.
+- PascalCase: 🔥CardVue (遵循組件名稱以保持一致性)。
+- 雙下劃線 (__): 🔥CardBox__CardText。
+- 狀態 class 的雙連字符 (--): --dark、--active。
+- 使用表情符號以增強組織性/可讀性: 頁面元件 (🌀), 元件 (🔥)。
+- 無意義元素: 遵循元素名稱 🔥Card__Box__A、🔥PersonCard__Img。
 
-***This is my favorite version; you might have a different preference.***
+***這是只是我最喜歡的風格，你可能有不同的偏好。***
