@@ -3,20 +3,12 @@
 ## 快速連結
 
 - [什麼是 ESCSS](#什麼是-escss)
-- [核心概念 - 本質複雜性](#核心概念---本質複雜性essential-complexity)
 - [例子](#例子)
 - [問與答](#問與答)
 
 ## 什麼是 ESCSS?
 
-- ESCSS (發音如同 'escapes') 是一種銀彈方法論，靈感來自《人月神話》一書，旨在解決軟體困境，減少開發者的挫敗感。
-- ESCSS = Enhanced Structure (BEM) CSS
-
-## 核心概念 - 本質複雜性(essential complexity)
-
-將相似的事物分組，提取共同元素，並不斷重複。
-
-![loop](./assets/loop.gif)
+- ESCSS (pronounced 'escapes') = Enhanced Structure (BEM) CSS。
 
 ## 例子
 ### ESCSS-ESTest 錯誤日誌演示
@@ -79,20 +71,8 @@ ESCSS-ESTest 的線上錯誤演示，協助提升工作效率的工具。
 - [Repository](https://github.com/ESCSS-labs/demo-tailwind-playground)
 
 ## 問與答
-### JavaScript部分的演示
 
-- 當東西一多自然的會需要做整理，以避免重複性。
-```javascript
-const name = {
-  data: {},
-  in: {
-    reuse: {}
-  },
-  out: {}
-}
-```
-
-### CSS部分的演示
+### CSS
 
 #### ID:
 

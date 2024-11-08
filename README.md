@@ -7,13 +7,11 @@
 ## Quick Links
 
 - [What is ESCSS](#what-is-escss)
-- [Core Concept - Essence Complexity](#core-concept---essence-complexity)
 - [Demo](#demo)
 - [Q&A](#qa)
 
 ## What is ESCSS?
 
-- ESCSS is a Silver Bullet methodology, inspired by The Mythical Man-Month, designed to resolve software dilemmas and reduce developer frustration.
 - ESCSS (pronounced 'escapes') = Enhanced Structure (BEM) CSS
 
 ## Core Concept - Essence Complexity
@@ -83,20 +81,8 @@ Refer to the Tailwind playground website. And the internal structure is reconstr
 - [Repository](https://github.com/ESCSS-labs/demo-tailwind-playground)
 
 ## Q&A
-### Demo of the JavaScript part
 
-- When there are too many things, it will naturally need to be organized to avoid duplication.
-```javascript
-const name = {
-  data: {},
-  in: {
-    reuse: {}
-  },
-  out: {}
-}
-```
-
-### Demo of the CSS part
+### CSS
 
 #### ID:
 
