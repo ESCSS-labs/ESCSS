@@ -2,26 +2,35 @@
 
 # What is ESCSS?
 
-- Enhanced Structure CSS (pronounced 'escapes') is a methodology for CSS to handle JavaScript safety(BDD), inspired by BEM.
-
-**README is not finished yet**
+- ESCSS (Enhanced Structure CSS, pronounced "escapes") is a methodology to manage the complexity of CSS structures, inspired by BEM and *The Mythical Man-Month*.
 
 ## CSS
 
 ### ID:
 
 - Keep HTML clean.
+- Easy work with QA team.
 - Maintain flat specificity (1,0,0) in general.
 - Handle Bootstrap !important situation.
+
 
 ### Status Class:
 
 - Use !important to override id.
 
-```scss
+```html
+<p id="🔥CardList__Title" class="--active">Demo</p>
+```
+
+```css
 .--active {
   background: red !important;
 }
+```
+or utility class
+
+```html
+<p id="🔥CardList__Title" class="!text-red-500">Demo</p>
 ```
 
 ### Developer Experience:
@@ -40,7 +49,7 @@
 ```
 
 ```scss
-// BEM way (Not Recommended)
+// BEM way (Not Recommended) - hard to search id
 #🔥PersonCard {
   // ...
   &__Img {
@@ -51,8 +60,17 @@
 
 ### Naming Convention:
 
-- PascalCase: 🔥CardList
-- Only First/Last word is important: 🔥CardList__X__X__Img、🔥CardList__X__X2__Name、🔥CardList__Title.
-- Emojis category: page/layout component (🌀), component (🔥). reuse component(🔗)
+- PascalCase: 
+  - 🔥CardList (CardList.vue、CardList.jsx ...)
+- Only First/Last word is important: 
+  - 🔥CardList__Title
+  - 🔥CardList__X__X__Img
+  - 🔥CardList__X__X2__Name
+- Emojis category: 
+  - #app(🌀)
+  - layout component (📁)
+  - page component (📃)
+  - component (🔥)
+  - reuse component (🔗)
 
-***This is my style, you may have different preferences.***
+*Emojis are used for visual recognition, but you may have a different preference.*
