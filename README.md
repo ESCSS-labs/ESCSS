@@ -2,43 +2,63 @@
 
 # What is ESCSS?
 
-- ESCSS (Enhanced Structure CSS, pronounced "escapes") is a methodology to manage the complexity of CSS structures, inspired by BEM and *The Mythical Man-Month*.
+- ESCSS (Escapes CSS, pronounced "escapes") is a methodology based on BEM.
 
-## CSS
+## Features
+  - 😁 Clean and readable HTML makes your day joyful
+  - 😵‍💫 No more worries about Bootstrap or CSS specificity
+  - 🤝 Seamless harmony between vanilla CSS, SCSS, and Tailwind
+  - ❤️ Better devtools experience for CSS
+  - 💯 Smaller bundle size (repetition compresses well with gzip)
+  - 💪 Makes QA / your job easier
 
-### ID:
+## Status class:
 
-- Keep HTML clean.
-- Easy work with QA team.
-- Maintain flat specificity (1,0,0) in general.
-- Handle Bootstrap !important situation.
-
-
-### Status Class:
-
-- Use !important to override id.
+- Use `!important` to override id / class / bootstrap for consistency
 
 ```html
-<p id="🔥CardList__Title" class="--active">Demo</p>
+<!-- tailwind -->
+<p id="🔥CardList__Title" class="bg-black!">Demo</p>
 ```
 
-```css
-.--active {
-  background: red !important;
-}
-```
-or utility class
+or 
 
 ```html
-<p id="🔥CardList__Title" class="!text-red-500">Demo</p>
+<!-- CSS -->
+<p id="🔥CardList__Title" class="--active-black">Demo</p>
 ```
-
-### Developer Experience:
-
-- Increase devtool readability.
 
 ```scss
-// Easy to copy/search/replace (Recommended)
+#🔥CardList__Title {
+  background: gray;
+}
+
+.--active-black {
+  background: black !important;
+}
+```
+
+## Naming Convention:
+
+- PascalCase: 
+  - 🔥CardList (named based on the component, e.g., `CardList.vue`, `CardList.jsx`)
+
+- Only First / Last word is meaningful:
+  - 🔥CardList__Title
+  - 🔥CardList__X__X__Img
+  - 🔥CardList__X__X__Name
+
+- Emojis category (you may have a different preference): 
+  - app(🌀)
+  - layout component (📁)
+  - page component (📃)
+  - component (🔥)
+  - reuse component (🔗)
+
+
+## Note
+```scss
+// Recommended: easy to search / replace
 #🔥PersonCard {
   // ...
 }
@@ -49,7 +69,7 @@ or utility class
 ```
 
 ```scss
-// BEM way (Not Recommended) - hard to search id
+// NOT Recommended: hard to search / replace in SCSS
 #🔥PersonCard {
   // ...
   &__Img {
@@ -57,20 +77,3 @@ or utility class
   }
 }
 ```
-
-### Naming Convention:
-
-- PascalCase: 
-  - 🔥CardList (CardList.vue、CardList.jsx ...)
-- Only First/Last word is important: 
-  - 🔥CardList__Title
-  - 🔥CardList__X__X__Img
-  - 🔥CardList__X__X2__Name
-- Emojis category: 
-  - #app(🌀)
-  - layout component (📁)
-  - page component (📃)
-  - component (🔥)
-  - reuse component (🔗)
-
-*Emojis are used for visual recognition, but you may have a different preference.*
