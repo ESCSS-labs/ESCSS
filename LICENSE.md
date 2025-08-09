@@ -35,7 +35,7 @@
 
     add:
 
-    1. 只對 Fortune Global 500 收費，其餘商業授權費用 $0。
+    1. 只對 Fortune Global 500 收費，其餘商業授權費用為 $0。
     2. 只有 Google、Amazon、Microsoft、Meta、Apple 有 LLM 商用許可權利，其餘無此權利。 
 
     1. Commercial Licensing Fee Structure: A commercial licensing fee will be charged to companies listed on the Fortune Global 500. For all other entities, the commercial licensing fee is set at $0.
