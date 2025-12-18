@@ -2,78 +2,89 @@
 
 # What is ESCSS?
 
-- ESCSS (Escapes CSS, pronounced "escapes") is a methodology based on BEM.
+ESCSS (pronounced "escapes") is **the progressive methodology** based on [BEM](https://en.bem.info/) & [The Mythical Man-Month](https://en.wikipedia.org/wiki/The_Mythical_Man-Month)
 
-## Features
-  - 😁 Clean and readable HTML makes your day joyful
-  - 😵‍💫 No more worries about Bootstrap or CSS specificity
-  - 🤝 Seamless harmony between vanilla CSS, SCSS, and Tailwind
-  - ❤️ Better devtools experience for CSS
-  - 💯 Smaller bundle size (repetition compresses well with gzip)
-  - 💪 Makes QA / your job easier
+## Why?
+  - 🔥 Bring Clarity to HTML/CSS/JS Project
+  - 💪 ID-Based E2E Simplicity
+  - 🤝 Harmony with CSS, SCSS and Tailwind
+  - 💣 Don't care about CSS specificity
+  - ❤️ Clean CSS DevTools Experience
+  - 🪶 Smaller CSS sizes
+  - ⬇️ Clean HTML
+  ![image](./assets/cable-management.png)
 
-## Status class:
-
-- Use `!important` to override id / class / bootstrap for consistency
-
-```html
-<!-- tailwind -->
-<p id="🔥CardList__Title" class="bg-black!">Demo</p>
-```
-
-or 
-
-```html
-<!-- CSS -->
-<p id="🔥CardList__Title" class="--active-black">Demo</p>
-```
-
-```scss
-#🔥CardList__Title {
-  background: gray;
-}
-
-.--active-black {
-  background: black !important;
-}
-```
+## Emoji for Visualization (Optional)
+  - (🏗️)LayoutComponent
+  - (🏠)page-component -> `kebab-case` for URL-related page components.
+  - (🔩)SharedComponent
+  - (🧱)Component
 
 ## Naming Convention:
 
 - PascalCase: 
-  - 🔥CardList (named based on the component, e.g., `CardList.vue`, `CardList.jsx`)
+  - 🧱CardList (see `CardList.vue`, `CardList.jsx`)
 
-- Only First / Last word is meaningful:
-  - 🔥CardList__Title
-  - 🔥CardList__X__X__Img
-  - 🔥CardList__X__X__Name
+- Only `First` / `Last` word matters:
+  - 🧱CardList__Title
+  - 🧱CardList__X__Address
+  - 🧱CardList__X__X__Name
 
-- Emojis category (you may have a different preference): 
-  - app(🌀)
-  - layout component (📁)
-  - page component (📃)
-  - component (🔥)
-  - reuse component (🔗)
+- compressed with gzip:
+  - `__X` <- repeated pattern
 
+- What if ...?
+  ```html
+  <!-- Extract into a component  -->
+  
+  <!-- BEFORE -->
+  <section id="🧱CardList">
+      <div id="🧱CardList__X">
+        <!-- other components -->
+      </div>
 
-## Note
-```scss
-// Recommended: easy to search / replace
-#🔥PersonCard {
-  // ...
-}
+      <div id="🧱CardList__X2">
+          <div id="🧱CardItem__X2__X">
+              <div id="🧱CardItem__X2__X__Name">
+              <div id="🧱CardItem__X2__X__Price">
+              <div id="🧱CardItem__X2__X__Content">
+              <div id="🧱CardItem__X2__X__Amount">
+      </div>
+  </section>
+  
 
-#🔥PersonCard__Img {
-  // ...
-}
+  <!-- AFTER -->
+  <section id="🧱CardList">
+      <div id="🧱CardList__X">
+        <!-- other components -->
+      </div>
+
+      <div id="🧱CardList__X2">
+          <div id="🔩CardItem">
+              <div id="🔩CardItem__Name">
+              <div id="🔩CardItem__Price">
+              <div id="🔩CardItem__Content">
+              <div id="🔩CardItem__Amount">
+      </div>
+  </section>
+  ```
+
+## Status class:
+```html
+<!-- using tailwind -->
+<p id="🧱CardList" class="!bg-red-500">Demo</p>
 ```
 
-```scss
-// NOT Recommended: hard to search / replace in SCSS
-#🔥PersonCard {
-  // ...
-  &__Img {
-    // ...
-  }
+``` html
+<!-- using CSS / SCSS -->
+<p id="🧱CardList" class="--active">Demo</p>
+```
+``` scss
+#🧱CardList {
+  background: blue;
+}
+
+.--active {
+  background: red !important;
 }
 ```

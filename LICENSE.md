@@ -31,7 +31,7 @@
       share modifications with others
       modify in a way that competes with the original software for customers
 
-    [Commercial License Detail (ESCSS + ESCSS-SCSS + ESCSS-ESTest + Nuxt-ESCSS-ESTest)](https://github.com/ESCSS-labs/ESCSS/blob/main/assets/commercial.pdf)
+  [Commercial License pdf Detail (ESCSS + ESCSS-SCSS + ESCSS-ESTest + Nuxt-ESCSS-ESTest)](https://github.com/ESCSS-labs/ESCSS/blob/main/assets/commercial.pdf)
 
     add:
 
